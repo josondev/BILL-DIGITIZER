@@ -56,7 +56,7 @@ Rules:
 
 
 class NL2SQLConverter:
-    def __init__(self, api_key: str = "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", model: str = "meta/llama-3.1-70b-instruct"):
+    def __init__(self, api_key: str = "your_nvidia_api_key", model: str = "meta/llama-3.1-70b-instruct"):
         """
         Initialize NL2SQL converter with NVIDIA NIM
         
@@ -113,4 +113,5 @@ def nl_to_sql(question: str) -> str:
     Requires NVIDIA_API_KEY environment variable
     """
     converter = NL2SQLConverter()
+
     return converter.convert(question)
